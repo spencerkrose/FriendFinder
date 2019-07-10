@@ -1,0 +1,24 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "A friend finder for adults. No, not that one.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencerkrose/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencerkrose/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/spencerkrose/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
