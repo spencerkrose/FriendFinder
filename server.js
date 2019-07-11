@@ -11,6 +11,8 @@ var PORT = process.env.PORT || 8060;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Static directory
+app.use(express.static("app/public"));
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../FriendFinder/public/home.html"));
