@@ -12,15 +12,10 @@ var PORT = process.env.PORT || 8060;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("public"));
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../FriendFinder/public/home.html"));
-  });
-
-  app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "../FriendFinder/public/survey.html"));
-  });
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
 app.listen(PORT, function() {
   console.log("App listening on http://localhost:" +PORT);
